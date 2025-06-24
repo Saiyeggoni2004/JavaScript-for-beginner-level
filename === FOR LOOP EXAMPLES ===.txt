@@ -1,0 +1,120 @@
+// === FOR LOOP EXAMPLES ===
+// 1. Print "Apna College" multiple times
+for (let i = 0; i < 5; i++) {
+  console.log("Apna College");
+}
+
+// 2. Calculate sum of first 'n' numbers
+let sum = 0;
+let n = 5;
+for (let i = 1; i <= n; i++) {
+  sum += i;
+}
+console.log("Sum of first", n, "numbers:", sum);
+
+// 3. Infinite loop (Use with caution!)
+// for (let i = 1; i > 0; i++) {
+//   console.log(i); // This will never stop
+// }
+
+// 4. Variable scope difference between let and var
+for (let i = 0; i < 3; i++) {
+  let a = 10;
+  var b = 20;
+}
+// console.log(a); // Error: a is not defined
+console.log(b); // Works: var is function-scoped
+
+// === WHILE LOOP ===
+let i = 1;
+while (i <= 5) {
+  console.log(i);
+  i++;
+}
+
+// === DO-WHILE LOOP ===
+let j = 20;
+do {
+  console.log("Apna College");
+  j++;
+} while (j <= 10);
+
+// === FOR-OF LOOP ===
+let str = "Apna College";
+for (let char of str) {
+  console.log(char);
+}
+
+// Calculate length using for-of loop
+let length = 0;
+for (let ch of str) {
+  length++;
+}
+console.log("Length:", length);
+
+// === FOR-IN LOOP ===
+let student = {
+  name: "Rahul",
+  age: 20,
+  CGPA: 8.2,
+  pass: true
+};
+
+for (let key in student) {
+  console.log(key + ": " + student[key]);
+}
+
+// === EVEN/ODD NUMBERS ===
+for (let num = 0; num <= 100; num++) {
+  if (num % 2 === 0) {
+    console.log("Even:", num);
+  }
+}
+
+// === NUMBER GUESSING GAME ===
+// let guess;
+// const secret = 42;
+// while (guess != secret) {
+//   guess = prompt("Guess the number:");
+//   if (Number(guess) === secret) alert("Correct!");
+// }
+
+// === STRING EXAMPLES ===
+let greeting = "Hello World";
+let template = `Welcome to JavaScript`;
+
+// .length property
+console.log("Length:", greeting.length);
+
+// Access individual characters
+console.log(greeting[0]); // 'H'
+
+// Template Literals
+let item = "Pen";
+let price = 10;
+console.log(`The cost of ${item} is ${price}`);
+
+// Escape characters
+console.log("Line1\nLine2");
+console.log("Column1\tColumn2");
+
+// String Methods
+let messy = "   own college JS   ";
+console.log(messy.trim());               // Removes extra spaces
+console.log(greeting.toUpperCase());    // Converts to uppercase
+console.log(greeting.toLowerCase());    // Converts to lowercase
+console.log(greeting.slice(0, 5));      // Extracts "Hello"
+console.log("Java".concat("Script"));   // Merges to "JavaScript"
+console.log("Hello".replace("H", "Y")); // Replaces first 'H' with 'Y'
+console.log("I Love JS".charAt(0));     // Gets 'I'
+
+// String Immutability
+let word = "Cat";
+// word[0] = 'B'; // This doesn't work
+word = word.replace("C", "B"); // Correct way
+console.log(word); // "Bat"
+
+// === USERNAME GENERATOR ===
+let fullName = "ShradhaKhapra";
+let userName = "@" + fullName + fullName.length;
+console.log(userName); // Output: @ShradhaKhapra13
